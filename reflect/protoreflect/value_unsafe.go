@@ -7,7 +7,7 @@ package protoreflect
 import (
 	"unsafe"
 
-	"google.golang.org/protobuf/internal/pragma"
+	"github.com/gucooing/bexor/internal/pragma"
 )
 
 type (

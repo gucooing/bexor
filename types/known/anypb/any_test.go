@@ -8,14 +8,14 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/protocmp"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/testing/protocmp"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	apb "google.golang.org/protobuf/types/known/anypb"
-	epb "google.golang.org/protobuf/types/known/emptypb"
-	wpb "google.golang.org/protobuf/types/known/wrapperspb"
+	testpb "github.com/gucooing/bexor/internal/testprotos/test"
+	apb "github.com/gucooing/bexor/types/known/anypb"
+	epb "github.com/gucooing/bexor/types/known/emptypb"
+	wpb "github.com/gucooing/bexor/types/known/wrapperspb"
 )
 
 func mustMarshal(m proto.Message) []byte {

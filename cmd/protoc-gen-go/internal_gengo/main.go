@@ -16,18 +16,18 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"google.golang.org/protobuf/compiler/protogen"
-	"google.golang.org/protobuf/internal/editionssupport"
-	"google.golang.org/protobuf/internal/encoding/tag"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/internal/version"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoimpl"
+	"github.com/gucooing/bexor/compiler/protogen"
+	"github.com/gucooing/bexor/internal/editionssupport"
+	"github.com/gucooing/bexor/internal/encoding/tag"
+	"github.com/gucooing/bexor/internal/filedesc"
+	"github.com/gucooing/bexor/internal/genid"
+	"github.com/gucooing/bexor/internal/version"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/runtime/protoimpl"
 
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/gofeaturespb"
-	"google.golang.org/protobuf/types/pluginpb"
+	"github.com/gucooing/bexor/types/descriptorpb"
+	"github.com/gucooing/bexor/types/gofeaturespb"
+	"github.com/gucooing/bexor/types/pluginpb"
 )
 
 // SupportedFeatures reports the set of supported protobuf language features.
@@ -59,12 +59,12 @@ const (
 // patched to support unique build environments that impose restrictions
 // on the dependencies of generated source code.
 var (
-	protoPackage         goImportPath = protogen.GoImportPath("google.golang.org/protobuf/proto")
-	protoifacePackage    goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoiface")
-	protoimplPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoimpl")
-	protojsonPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/encoding/protojson")
-	protoreflectPackage  goImportPath = protogen.GoImportPath("google.golang.org/protobuf/reflect/protoreflect")
-	protoregistryPackage goImportPath = protogen.GoImportPath("google.golang.org/protobuf/reflect/protoregistry")
+	protoPackage         goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/proto")
+	protoifacePackage    goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/runtime/protoiface")
+	protoimplPackage     goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/runtime/protoimpl")
+	protojsonPackage     goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/encoding/protojson")
+	protoreflectPackage  goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/reflect/protoreflect")
+	protoregistryPackage goImportPath = protogen.GoImportPath("github.com/gucooing/bexor/reflect/protoregistry")
 )
 
 type goImportPath interface {

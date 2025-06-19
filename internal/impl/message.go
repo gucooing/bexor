@@ -12,8 +12,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/internal/genid"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 // MessageInfo provides protobuf related functionality for a given Go type
@@ -139,6 +139,8 @@ type structInfo struct {
 	oneofsByName          map[protoreflect.Name]reflect.StructField
 	oneofWrappersByType   map[reflect.Type]protoreflect.FieldNumber
 	oneofWrappersByNumber map[protoreflect.FieldNumber]reflect.Type
+
+	fieldsByXor map[int]interface{}
 }
 
 func (mi *MessageInfo) makeStructInfo(t reflect.Type) structInfo {
@@ -149,6 +151,7 @@ func (mi *MessageInfo) makeStructInfo(t reflect.Type) structInfo {
 		lazyOffset:      invalidOffset,
 		presenceOffset:  invalidOffset,
 
+		fieldsByXor:           map[int]interface{}{},
 		fieldsByNumber:        map[protoreflect.FieldNumber]reflect.StructField{},
 		oneofsByName:          map[protoreflect.Name]reflect.StructField{},
 		oneofWrappersByType:   map[reflect.Type]protoreflect.FieldNumber{},
@@ -178,6 +181,12 @@ fieldLoop:
 		case "XXX_presence":
 			si.presenceOffset = offsetOf(f)
 		default:
+			if s := f.Tag.Get("xor_const"); s != "" {
+				si.fieldsByXor[i-1] = xorTagToType(s, f.Type)
+			}
+			if s := f.Tag.Get("XOR"); s != "" {
+				si.fieldsByXor[i-1] = xorTagToType(s, f.Type)
+			}
 			for _, s := range strings.Split(f.Tag.Get("protobuf"), ",") {
 				if len(s) > 0 && strings.Trim(s, "0123456789") == "" {
 					n, _ := strconv.ParseUint(s, 10, 64)
@@ -222,6 +231,22 @@ fieldLoop:
 	}
 
 	return si
+}
+
+func xorTagToType(tag string, t reflect.Type) interface{} {
+	switch t.Kind() {
+	case reflect.String:
+		return tag
+	case reflect.Int32, reflect.Int64, reflect.Uint32, reflect.Uint64:
+		index, _ := strconv.ParseUint(tag, 10, 64)
+		return index
+	case reflect.Float32, reflect.Float64:
+		return tag
+	case reflect.Bool:
+		return true
+	default:
+		return tag
+	}
 }
 
 func (mi *MessageInfo) New() protoreflect.Message {

@@ -10,12 +10,12 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/testing/protocmp"
+	"github.com/gucooing/bexor/encoding/prototext"
+	"github.com/gucooing/bexor/internal/genid"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/testing/protocmp"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/gucooing/bexor/types/descriptorpb"
 )
 
 func TestAnnotations(t *testing.T) {

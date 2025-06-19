@@ -8,8 +8,8 @@
 package test
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -56,7 +56,7 @@ var File_internal_testprotos_test_test_public_proto protoreflect.FileDescriptor
 const file_internal_testprotos_test_test_public_proto_rawDesc = "" +
 	"\n" +
 	"*internal/testprotos/test/test_public.proto\x12\x12goproto.proto.test\"\x15\n" +
-	"\x13PublicImportMessageB5Z3google.golang.org/protobuf/internal/testprotos/test"
+	"\x13PublicImportMessageB5Z3github.com/gucooing/bexor/internal/testprotos/test"
 
 var (
 	file_internal_testprotos_test_test_public_proto_rawDescOnce sync.Once

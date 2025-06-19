@@ -11,9 +11,9 @@ import (
 	"strings"
 	"sync"
 
-	"google.golang.org/protobuf/internal/descfmt"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/internal/descfmt"
+	"github.com/gucooing/bexor/internal/pragma"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 type Enums struct {

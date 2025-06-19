@@ -10,9 +10,9 @@
 package messagesetpb_hybrid
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/gofeaturespb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	_ "github.com/gucooing/bexor/types/gofeaturespb"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -138,7 +138,7 @@ const file_internal_testprotos_messageset_messagesetpb_messagesetpb_hybrid_messa
 	"MessageSet*\b\b\x04\x10\xff\xff\xff\xff\a:\x02\b\x01\"c\n" +
 	"\x13MessageSetContainer\x12L\n" +
 	"\vmessage_set\x18\x01 \x01(\v2+.hybrid.goproto.proto.messageset.MessageSetR\n" +
-	"messageSetBdZZgoogle.golang.org/protobuf/internal/testprotos/messageset/messagesetpb/messagesetpb_hybrid\x92\x03\x05\xd2>\x02\x10\x02b\beditionsp\xe8\a"
+	"messageSetBdZZgithub.com/gucooing/bexor/internal/testprotos/messageset/messagesetpb/messagesetpb_hybrid\x92\x03\x05\xd2>\x02\x10\x02b\beditionsp\xe8\a"
 
 var file_internal_testprotos_messageset_messagesetpb_messagesetpb_hybrid_message_set_hybrid_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_internal_testprotos_messageset_messagesetpb_messagesetpb_hybrid_message_set_hybrid_proto_goTypes = []any{

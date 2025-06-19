@@ -9,10 +9,10 @@ import (
 	"math"
 	"testing"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/testeditions"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/prototest"
+	testpb "github.com/gucooing/bexor/internal/testprotos/testeditions"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/testing/prototest"
 )
 
 func TestOpenConcrete(t *testing.T) {

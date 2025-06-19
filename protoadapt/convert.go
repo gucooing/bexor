@@ -6,16 +6,16 @@
 package protoadapt
 
 import (
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/runtime/protoiface"
-	"google.golang.org/protobuf/runtime/protoimpl"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/runtime/protoiface"
+	"github.com/gucooing/bexor/runtime/protoimpl"
 )
 
 // MessageV1 is the original [github.com/golang/protobuf/proto.Message] type.
 type MessageV1 = protoiface.MessageV1
 
-// MessageV2 is the [google.golang.org/protobuf/proto.Message] type used by the
-// current [google.golang.org/protobuf] module, adding support for reflection.
+// MessageV2 is the [github.com/gucooing/bexor/proto.Message] type used by the
+// current [github.com/gucooing/bexor] module, adding support for reflection.
 type MessageV2 = proto.Message
 
 // MessageV1Of converts a v2 message to a v1 message.

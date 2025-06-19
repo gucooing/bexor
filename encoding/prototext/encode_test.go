@@ -12,18 +12,18 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/gucooing/bexor/encoding/prototext"
+	"github.com/gucooing/bexor/internal/detrand"
+	"github.com/gucooing/bexor/internal/flags"
+	"github.com/gucooing/bexor/internal/protobuild"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protoregistry"
+	"github.com/gucooing/bexor/testing/protopack"
 
-	pb2 "google.golang.org/protobuf/internal/testprotos/textpb2"
-	pb3 "google.golang.org/protobuf/internal/testprotos/textpb3"
-	pbeditions "google.golang.org/protobuf/internal/testprotos/textpbeditions"
-	"google.golang.org/protobuf/types/known/anypb"
+	pb2 "github.com/gucooing/bexor/internal/testprotos/textpb2"
+	pb3 "github.com/gucooing/bexor/internal/testprotos/textpb3"
+	pbeditions "github.com/gucooing/bexor/internal/testprotos/textpbeditions"
+	"github.com/gucooing/bexor/types/known/anypb"
 )
 
 func init() {

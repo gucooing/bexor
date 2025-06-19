@@ -5,8 +5,8 @@
 package prototext_test
 
 import (
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
+	"github.com/gucooing/bexor/internal/protobuild"
+	"github.com/gucooing/bexor/proto"
 )
 
 func makeMessages(in protobuild.Message, messages ...proto.Message) []proto.Message {

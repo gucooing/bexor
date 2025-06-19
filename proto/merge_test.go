@@ -12,17 +12,17 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/protobuild"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/testing/protopack"
-	"google.golang.org/protobuf/types/dynamicpb"
+	"github.com/gucooing/bexor/encoding/prototext"
+	"github.com/gucooing/bexor/internal/protobuild"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/testing/protocmp"
+	"github.com/gucooing/bexor/testing/protopack"
+	"github.com/gucooing/bexor/types/dynamicpb"
 
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
+	legacypb "github.com/gucooing/bexor/internal/testprotos/legacy"
+	testpb "github.com/gucooing/bexor/internal/testprotos/test"
+	test3pb "github.com/gucooing/bexor/internal/testprotos/test3"
 )
 
 type testMerge struct {

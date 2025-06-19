@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"testing"
 
-	testhybridpb "google.golang.org/protobuf/internal/testprotos/testeditions/testeditions_hybrid"
-	"google.golang.org/protobuf/proto"
+	testhybridpb "github.com/gucooing/bexor/internal/testprotos/testeditions/testeditions_hybrid"
+	"github.com/gucooing/bexor/proto"
 )
 
 func TestOneofOrDefault(t *testing.T) {

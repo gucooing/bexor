@@ -8,8 +8,8 @@
 package message
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -66,7 +66,7 @@ const file_internal_testprotos_race_message_test_proto_rawDesc = "" +
 	"\n" +
 	"+internal/testprotos/race/message/test.proto\x12\x12goproto.proto.test\"#\n" +
 	"\tMyMessage\x12\x10\n" +
-	"\x03i32\x18\x01 \x01(\x05R\x03i32*\x04\b\x02\x10\x03B=Z;google.golang.org/protobuf/internal/testprotos/race/messageb\beditionsp\xe8\a"
+	"\x03i32\x18\x01 \x01(\x05R\x03i32*\x04\b\x02\x10\x03B=Z;github.com/gucooing/bexor/internal/testprotos/race/messageb\beditionsp\xe8\a"
 
 var (
 	file_internal_testprotos_race_message_test_proto_rawDescOnce sync.Once

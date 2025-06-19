@@ -18,14 +18,14 @@
 package editions
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	anypb "google.golang.org/protobuf/types/known/anypb"
-	durationpb "google.golang.org/protobuf/types/known/durationpb"
-	fieldmaskpb "google.golang.org/protobuf/types/known/fieldmaskpb"
-	structpb "google.golang.org/protobuf/types/known/structpb"
-	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	anypb "github.com/gucooing/bexor/types/known/anypb"
+	durationpb "github.com/gucooing/bexor/types/known/durationpb"
+	fieldmaskpb "github.com/gucooing/bexor/types/known/fieldmaskpb"
+	structpb "github.com/gucooing/bexor/types/known/structpb"
+	timestamppb "github.com/gucooing/bexor/types/known/timestamppb"
+	wrapperspb "github.com/gucooing/bexor/types/known/wrapperspb"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"

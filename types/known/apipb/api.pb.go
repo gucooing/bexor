@@ -34,10 +34,10 @@
 package apipb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	sourcecontextpb "google.golang.org/protobuf/types/known/sourcecontextpb"
-	typepb "google.golang.org/protobuf/types/known/typepb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	sourcecontextpb "github.com/gucooing/bexor/types/known/sourcecontextpb"
+	typepb "github.com/gucooing/bexor/types/known/typepb"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -428,7 +428,7 @@ const file_google_protobuf_api_proto_rawDesc = "" +
 	"\x05Mixin\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n" +
 	"\x04root\x18\x02 \x01(\tR\x04rootBv\n" +
-	"\x13com.google.protobufB\bApiProtoP\x01Z,google.golang.org/protobuf/types/known/apipb\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
+	"\x13com.google.protobufB\bApiProtoP\x01Z,github.com/gucooing/bexor/types/known/apipb\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
 
 var (
 	file_google_protobuf_api_proto_rawDescOnce sync.Once

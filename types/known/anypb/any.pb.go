@@ -115,10 +115,10 @@
 package anypb
 
 import (
-	proto "google.golang.org/protobuf/proto"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoregistry "google.golang.org/protobuf/reflect/protoregistry"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	proto "github.com/gucooing/bexor/proto"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoregistry "github.com/gucooing/bexor/reflect/protoregistry"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	strings "strings"
 	sync "sync"
@@ -418,7 +418,7 @@ const file_google_protobuf_any_proto_rawDesc = "" +
 	"\x03Any\x12\x19\n" +
 	"\btype_url\x18\x01 \x01(\tR\atypeUrl\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\fR\x05valueBv\n" +
-	"\x13com.google.protobufB\bAnyProtoP\x01Z,google.golang.org/protobuf/types/known/anypb\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
+	"\x13com.google.protobufB\bAnyProtoP\x01Z,github.com/gucooing/bexor/types/known/anypb\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
 
 var (
 	file_google_protobuf_any_proto_rawDescOnce sync.Once

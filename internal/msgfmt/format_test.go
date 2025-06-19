@@ -11,19 +11,19 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/msgfmt"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/gucooing/bexor/internal/detrand"
+	"github.com/gucooing/bexor/internal/msgfmt"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/testing/protocmp"
+	"github.com/gucooing/bexor/testing/protopack"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	textpb "google.golang.org/protobuf/internal/testprotos/textpb2"
-	dynpb "google.golang.org/protobuf/types/dynamicpb"
-	"google.golang.org/protobuf/types/known/anypb"
-	durpb "google.golang.org/protobuf/types/known/durationpb"
-	tspb "google.golang.org/protobuf/types/known/timestamppb"
-	wpb "google.golang.org/protobuf/types/known/wrapperspb"
+	testpb "github.com/gucooing/bexor/internal/testprotos/test"
+	textpb "github.com/gucooing/bexor/internal/testprotos/textpb2"
+	dynpb "github.com/gucooing/bexor/types/dynamicpb"
+	"github.com/gucooing/bexor/types/known/anypb"
+	durpb "github.com/gucooing/bexor/types/known/durationpb"
+	tspb "github.com/gucooing/bexor/types/known/timestamppb"
+	wpb "github.com/gucooing/bexor/types/known/wrapperspb"
 )
 
 func init() {

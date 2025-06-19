@@ -13,17 +13,17 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	pimpl "google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/gucooing/bexor/encoding/prototext"
+	pimpl "github.com/gucooing/bexor/internal/impl"
+	"github.com/gucooing/bexor/internal/pragma"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protodesc"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/reflect/protoregistry"
+	"github.com/gucooing/bexor/runtime/protoiface"
 
-	proto2_20180125 "google.golang.org/protobuf/internal/testprotos/legacy/proto2_20180125_92554152"
-	"google.golang.org/protobuf/types/descriptorpb"
+	proto2_20180125 "github.com/gucooing/bexor/internal/testprotos/legacy/proto2_20180125_92554152"
+	"github.com/gucooing/bexor/types/descriptorpb"
 )
 
 type LegacyTestMessage struct {

@@ -8,11 +8,11 @@ import (
 	"reflect"
 	"testing"
 
-	"google.golang.org/protobuf/internal/encoding/tag"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/internal/encoding/tag"
+	"github.com/gucooing/bexor/internal/filedesc"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protodesc"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 func Test(t *testing.T) {

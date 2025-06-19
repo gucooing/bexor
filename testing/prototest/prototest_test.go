@@ -8,16 +8,16 @@ import (
 	"fmt"
 	"testing"
 
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/runtime/protoimpl"
-	"google.golang.org/protobuf/testing/prototest"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/runtime/protoimpl"
+	"github.com/gucooing/bexor/testing/prototest"
 
-	irregularpb "google.golang.org/protobuf/internal/testprotos/irregular"
-	legacypb "google.golang.org/protobuf/internal/testprotos/legacy"
-	legacy1pb "google.golang.org/protobuf/internal/testprotos/legacy/proto2_20160225_2fc053c5"
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
-	test3pb "google.golang.org/protobuf/internal/testprotos/test3"
-	testeditionspb "google.golang.org/protobuf/internal/testprotos/testeditions"
+	irregularpb "github.com/gucooing/bexor/internal/testprotos/irregular"
+	legacypb "github.com/gucooing/bexor/internal/testprotos/legacy"
+	legacy1pb "github.com/gucooing/bexor/internal/testprotos/legacy/proto2_20160225_2fc053c5"
+	testpb "github.com/gucooing/bexor/internal/testprotos/test"
+	test3pb "github.com/gucooing/bexor/internal/testprotos/test3"
+	testeditionspb "github.com/gucooing/bexor/internal/testprotos/testeditions"
 )
 
 func Test(t *testing.T) {

@@ -11,22 +11,22 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/internal/detrand"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	"google.golang.org/protobuf/testing/protopack"
+	"github.com/gucooing/bexor/encoding/protojson"
+	"github.com/gucooing/bexor/internal/detrand"
+	"github.com/gucooing/bexor/internal/flags"
+	"github.com/gucooing/bexor/proto"
+	"github.com/gucooing/bexor/reflect/protoregistry"
+	"github.com/gucooing/bexor/testing/protopack"
 
-	pb2 "google.golang.org/protobuf/internal/testprotos/textpb2"
-	pb3 "google.golang.org/protobuf/internal/testprotos/textpb3"
-	"google.golang.org/protobuf/types/known/anypb"
-	"google.golang.org/protobuf/types/known/durationpb"
-	"google.golang.org/protobuf/types/known/emptypb"
-	"google.golang.org/protobuf/types/known/fieldmaskpb"
-	"google.golang.org/protobuf/types/known/structpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
-	"google.golang.org/protobuf/types/known/wrapperspb"
+	pb2 "github.com/gucooing/bexor/internal/testprotos/textpb2"
+	pb3 "github.com/gucooing/bexor/internal/testprotos/textpb3"
+	"github.com/gucooing/bexor/types/known/anypb"
+	"github.com/gucooing/bexor/types/known/durationpb"
+	"github.com/gucooing/bexor/types/known/emptypb"
+	"github.com/gucooing/bexor/types/known/fieldmaskpb"
+	"github.com/gucooing/bexor/types/known/structpb"
+	"github.com/gucooing/bexor/types/known/timestamppb"
+	"github.com/gucooing/bexor/types/known/wrapperspb"
 )
 
 // Disable detrand to enable direct comparisons on outputs.

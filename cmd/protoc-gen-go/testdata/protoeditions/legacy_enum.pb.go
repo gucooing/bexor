@@ -8,9 +8,9 @@
 package protoeditions
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/gofeaturespb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	_ "github.com/gucooing/bexor/types/gofeaturespb"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -231,7 +231,7 @@ const file_cmd_protoc_gen_go_testdata_protoeditions_legacy_enum_proto_rawDesc = 
 	"\x18EnumWithoutUnmarshalJSON\x12\x1e\n" +
 	"\x1aWITHOUT_UNMARSHAL_JSON_FOO\x10\x00\x12\x1e\n" +
 	"\x1aWITHOUT_UNMARSHAL_JSON_BAR\x10\x01\x12\x1e\n" +
-	"\x1aWITHOUT_UNMARSHAL_JSON_BAZ\x10\x02\x1a\a:\x05\xd2>\x02\b\x00BMZCgoogle.golang.org/protobuf/cmd/protoc-gen-go/testdata/protoeditions\x92\x03\x05\xd2>\x02\b\x01b\beditionsp\xe8\a"
+	"\x1aWITHOUT_UNMARSHAL_JSON_BAZ\x10\x02\x1a\a:\x05\xd2>\x02\b\x00BMZCgithub.com/gucooing/bexor/cmd/protoc-gen-go/testdata/protoeditions\x92\x03\x05\xd2>\x02\b\x01b\beditionsp\xe8\a"
 
 var (
 	file_cmd_protoc_gen_go_testdata_protoeditions_legacy_enum_proto_rawDescOnce sync.Once

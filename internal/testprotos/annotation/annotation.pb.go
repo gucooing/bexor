@@ -8,9 +8,9 @@
 package annotation
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	descriptorpb "google.golang.org/protobuf/types/descriptorpb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	descriptorpb "github.com/gucooing/bexor/types/descriptorpb"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -42,7 +42,7 @@ var File_internal_testprotos_annotation_annotation_proto protoreflect.FileDescri
 const file_internal_testprotos_annotation_annotation_proto_rawDesc = "" +
 	"\n" +
 	"/internal/testprotos/annotation/annotation.proto\x12\rgo_annotation\x1a google/protobuf/descriptor.proto:J\n" +
-	"\x0ftrack_field_use\x12\x1f.google.protobuf.MessageOptions\x18\x85\xdc\xe9\x11 \x01(\bR\rtrackFieldUseB;Z9google.golang.org/protobuf/internal/testprotos/annotation"
+	"\x0ftrack_field_use\x12\x1f.google.protobuf.MessageOptions\x18\x85\xdc\xe9\x11 \x01(\bR\rtrackFieldUseB;Z9github.com/gucooing/bexor/internal/testprotos/annotation"
 
 var file_internal_testprotos_annotation_annotation_proto_goTypes = []any{
 	(*descriptorpb.MessageOptions)(nil), // 0: google.protobuf.MessageOptions

@@ -8,9 +8,9 @@
 package testeditions_opaque
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/gofeaturespb"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
+	_ "github.com/gucooing/bexor/types/gofeaturespb"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -104,7 +104,7 @@ const file_internal_testprotos_testeditions_testeditions_opaque_test_import_opaq
 	"\rImportMessage*\x1d\n" +
 	"\n" +
 	"ImportEnum\x12\x0f\n" +
-	"\vIMPORT_ZERO\x10\x00BYZOgoogle.golang.org/protobuf/internal/testprotos/testeditions/testeditions_opaque\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vIMPORT_ZERO\x10\x00BYZOgithub.com/gucooing/bexor/internal/testprotos/testeditions/testeditions_opaque\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_internal_testprotos_testeditions_testeditions_opaque_test_import_opaque_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_internal_testprotos_testeditions_testeditions_opaque_test_import_opaque_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

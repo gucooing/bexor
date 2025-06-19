@@ -9,11 +9,11 @@ import (
 	"reflect"
 	"sort"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/encoding/messageset"
-	"google.golang.org/protobuf/internal/order"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/gucooing/bexor/encoding/protowire"
+	"github.com/gucooing/bexor/internal/encoding/messageset"
+	"github.com/gucooing/bexor/internal/order"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/runtime/protoiface"
 )
 
 // coderMessageInfo contains per-message information used by the fast-path functions.
@@ -49,6 +49,7 @@ type coderFieldInfo struct {
 	tagsize    int                      // size of the varint-encoded tag
 	isPointer  bool                     // true if IsNil may be called on the struct field
 	isRequired bool                     // true if field is required
+	xorIndex   interface{}              // xor
 
 	isLazy        bool
 	presenceIndex uint32
@@ -137,6 +138,7 @@ func (mi *MessageInfo) makeCoderMethods(t reflect.Type, si structInfo) {
 			isRequired: fd.Cardinality() == protoreflect.Required,
 
 			presenceIndex: noPresence,
+			xorIndex:      si.fieldsByXor[i],
 		}
 		mi.orderedCoderFields = append(mi.orderedCoderFields, cf)
 		mi.coderFields[cf.num] = cf

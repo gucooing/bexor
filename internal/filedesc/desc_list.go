@@ -10,13 +10,13 @@ import (
 	"sort"
 	"sync"
 
-	"google.golang.org/protobuf/internal/genid"
+	"github.com/gucooing/bexor/internal/genid"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/descfmt"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/encoding/protowire"
+	"github.com/gucooing/bexor/internal/descfmt"
+	"github.com/gucooing/bexor/internal/errors"
+	"github.com/gucooing/bexor/internal/pragma"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 type FileImports []protoreflect.FileImport

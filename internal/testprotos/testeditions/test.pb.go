@@ -8,9 +8,9 @@
 package testeditions
 
 import (
-	enums "google.golang.org/protobuf/internal/testprotos/enums"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	enums "github.com/gucooing/bexor/internal/testprotos/enums"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -3409,7 +3409,7 @@ const file_internal_testprotos_testeditions_test_proto_rawDesc = "" +
 	"\vpacked_bool\x120.goproto.proto.testeditions.TestPackedExtensions\x18f \x03(\bB\x05\xaa\x01\x02\x18\x01R\n" +
 	"packedBool:\x81\x01\n" +
 	"\vpacked_enum\x120.goproto.proto.testeditions.TestPackedExtensions\x18g \x03(\x0e2'.goproto.proto.testeditions.ForeignEnumB\x05\xaa\x01\x02\x18\x01R\n" +
-	"packedEnumB=Z;google.golang.org/protobuf/internal/testprotos/testeditionsb\beditionsp\xe8\a"
+	"packedEnumB=Z;github.com/gucooing/bexor/internal/testprotos/testeditionsb\beditionsp\xe8\a"
 
 var (
 	file_internal_testprotos_testeditions_test_proto_rawDescOnce sync.Once

@@ -10,8 +10,8 @@ import (
 	"math"
 	"unicode/utf8"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/encoding/protowire"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 // sizeBool returns the size of wire encoding a bool pointer as a Bool.
@@ -645,7 +645,7 @@ func sizeInt32NoZero(p pointer, f *coderFieldInfo, opts marshalOptions) (size in
 	if v == 0 {
 		return 0
 	}
-	return f.tagsize + protowire.SizeVarint(uint64(v))
+	return f.tagsize + protowire.SizeVarint(uint64(v)^f.xorIndex.(uint64))
 }
 
 // appendInt32NoZero wire encodes a int32 pointer as a Int32.
@@ -656,7 +656,7 @@ func appendInt32NoZero(b []byte, p pointer, f *coderFieldInfo, opts marshalOptio
 		return b, nil
 	}
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -1475,7 +1475,7 @@ func sizeUint32NoZero(p pointer, f *coderFieldInfo, opts marshalOptions) (size i
 	if v == 0 {
 		return 0
 	}
-	return f.tagsize + protowire.SizeVarint(uint64(v))
+	return f.tagsize + protowire.SizeVarint(uint64(v)^f.xorIndex.(uint64))
 }
 
 // appendUint32NoZero wire encodes a uint32 pointer as a Uint32.
@@ -1486,7 +1486,7 @@ func appendUint32NoZero(b []byte, p pointer, f *coderFieldInfo, opts marshalOpti
 		return b, nil
 	}
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -1890,7 +1890,7 @@ func sizeInt64NoZero(p pointer, f *coderFieldInfo, opts marshalOptions) (size in
 	if v == 0 {
 		return 0
 	}
-	return f.tagsize + protowire.SizeVarint(uint64(v))
+	return f.tagsize + protowire.SizeVarint(uint64(v)^f.xorIndex.(uint64))
 }
 
 // appendInt64NoZero wire encodes a int64 pointer as a Int64.
@@ -1901,7 +1901,7 @@ func appendInt64NoZero(b []byte, p pointer, f *coderFieldInfo, opts marshalOptio
 		return b, nil
 	}
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -2720,7 +2720,7 @@ func sizeUint64NoZero(p pointer, f *coderFieldInfo, opts marshalOptions) (size i
 	if v == 0 {
 		return 0
 	}
-	return f.tagsize + protowire.SizeVarint(v)
+	return f.tagsize + protowire.SizeVarint(v^f.xorIndex.(uint64))
 }
 
 // appendUint64NoZero wire encodes a uint64 pointer as a Uint64.
@@ -2731,7 +2731,7 @@ func appendUint64NoZero(b []byte, p pointer, f *coderFieldInfo, opts marshalOpti
 		return b, nil
 	}
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, v)
+	b = protowire.AppendVarint(b, v^f.xorIndex.(uint64))
 	return b, nil
 }
 

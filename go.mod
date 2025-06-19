@@ -1,4 +1,4 @@
-module google.golang.org/protobuf
+module github.com/gucooing/bexor
 
 go 1.22
 

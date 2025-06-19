@@ -8,8 +8,8 @@
 package fieldnames
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -354,7 +354,7 @@ const file_cmd_protoc_gen_go_testdata_fieldnames_fieldnames_proto_rawDesc = "" +
 	"\x14OneofMessageConflictB\x12\n" +
 	"\x10oneof_conflict_aB\x12\n" +
 	"\x10oneof_conflict_bB\x12\n" +
-	"\x10oneof_conflict_cBBZ@google.golang.org/protobuf/cmd/protoc-gen-go/testdata/fieldnames"
+	"\x10oneof_conflict_cBBZ@github.com/gucooing/bexor/cmd/protoc-gen-go/testdata/fieldnames"
 
 var (
 	file_cmd_protoc_gen_go_testdata_fieldnames_fieldnames_proto_rawDescOnce sync.Once

@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/gucooing/bexor/reflect/protoreflect"
+	"github.com/gucooing/bexor/reflect/protoregistry"
 
-	_ "google.golang.org/protobuf/internal/testprotos/textpbeditions"
-	_ "google.golang.org/protobuf/internal/testprotos/textpbeditions/textpbeditions_opaque"
+	_ "github.com/gucooing/bexor/internal/testprotos/textpbeditions"
+	_ "github.com/gucooing/bexor/internal/testprotos/textpbeditions/textpbeditions_opaque"
 )
 
 var relatedMessages = func() map[protoreflect.MessageType][]protoreflect.MessageType {

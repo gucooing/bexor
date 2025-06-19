@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/gucooing/bexor/reflect/protoreflect"
 )
 
 func newListConverter(t reflect.Type, fd protoreflect.FieldDescriptor) Converter {

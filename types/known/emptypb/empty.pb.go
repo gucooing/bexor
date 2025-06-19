@@ -34,8 +34,8 @@
 package emptypb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	protoreflect "github.com/gucooing/bexor/reflect/protoreflect"
+	protoimpl "github.com/gucooing/bexor/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -91,7 +91,7 @@ const file_google_protobuf_empty_proto_rawDesc = "" +
 	"\x1bgoogle/protobuf/empty.proto\x12\x0fgoogle.protobuf\"\a\n" +
 	"\x05EmptyB}\n" +
 	"\x13com.google.protobufB\n" +
-	"EmptyProtoP\x01Z.google.golang.org/protobuf/types/known/emptypb\xf8\x01\x01\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
+	"EmptyProtoP\x01Z.github.com/gucooing/bexor/types/known/emptypb\xf8\x01\x01\xa2\x02\x03GPB\xaa\x02\x1eGoogle.Protobuf.WellKnownTypesb\x06proto3"
 
 var (
 	file_google_protobuf_empty_proto_rawDescOnce sync.Once
