@@ -603,7 +603,7 @@ func sizeInt32(p pointer, f *coderFieldInfo, opts marshalOptions) (size int) {
 func appendInt32(b []byte, p pointer, f *coderFieldInfo, opts marshalOptions) ([]byte, error) {
 	v := *p.Int32()
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -626,7 +626,7 @@ func consumeInt32(b []byte, p pointer, wtyp protowire.Type, f *coderFieldInfo, o
 	if n < 0 {
 		return out, errDecode
 	}
-	*p.Int32() = int32(v)
+	*p.Int32() = int32(v^f.xorIndex.(uint64))
 	out.n = n
 	return out, nil
 }
@@ -1433,7 +1433,7 @@ func sizeUint32(p pointer, f *coderFieldInfo, opts marshalOptions) (size int) {
 func appendUint32(b []byte, p pointer, f *coderFieldInfo, opts marshalOptions) ([]byte, error) {
 	v := *p.Uint32()
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -1456,7 +1456,7 @@ func consumeUint32(b []byte, p pointer, wtyp protowire.Type, f *coderFieldInfo, 
 	if n < 0 {
 		return out, errDecode
 	}
-	*p.Uint32() = uint32(v)
+	*p.Uint32() = uint32(v^f.xorIndex.(uint64))
 	out.n = n
 	return out, nil
 }
@@ -1848,7 +1848,7 @@ func sizeInt64(p pointer, f *coderFieldInfo, opts marshalOptions) (size int) {
 func appendInt64(b []byte, p pointer, f *coderFieldInfo, opts marshalOptions) ([]byte, error) {
 	v := *p.Int64()
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, uint64(v))
+	b = protowire.AppendVarint(b, uint64(v)^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -1871,7 +1871,7 @@ func consumeInt64(b []byte, p pointer, wtyp protowire.Type, f *coderFieldInfo, o
 	if n < 0 {
 		return out, errDecode
 	}
-	*p.Int64() = int64(v)
+	*p.Int64() = int64(v^f.xorIndex.(uint64))
 	out.n = n
 	return out, nil
 }
@@ -2678,7 +2678,7 @@ func sizeUint64(p pointer, f *coderFieldInfo, opts marshalOptions) (size int) {
 func appendUint64(b []byte, p pointer, f *coderFieldInfo, opts marshalOptions) ([]byte, error) {
 	v := *p.Uint64()
 	b = protowire.AppendVarint(b, f.wiretag)
-	b = protowire.AppendVarint(b, v)
+	b = protowire.AppendVarint(b, v^f.xorIndex.(uint64))
 	return b, nil
 }
 
@@ -2701,7 +2701,7 @@ func consumeUint64(b []byte, p pointer, wtyp protowire.Type, f *coderFieldInfo, 
 	if n < 0 {
 		return out, errDecode
 	}
-	*p.Uint64() = v
+	*p.Uint64() = v^f.xorIndex.(uint64)
 	out.n = n
 	return out, nil
 }
