@@ -181,6 +181,7 @@ fieldLoop:
 		case "XXX_presence":
 			si.presenceOffset = offsetOf(f)
 		default:
+			si.fieldsByXor[i-1] = 0
 			if s := f.Tag.Get("xor_const"); s != "" {
 				si.fieldsByXor[i-1] = xorTagToType(s, f.Type)
 			}
